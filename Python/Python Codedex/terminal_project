@@ -36,7 +36,7 @@ if player_hp > 0:
     if player_choice == 1:
       random_dodge = random.randint(1, 100)
       if random_dodge >= 50:
-        print(f'\n You successfully dodged it; you can continue on your way. 🏃‍♂️👍')
+        print('\n You successfully dodged it; you can continue on your way. 🏃‍♂️👍')
       else:
         print('\n You couldn’t dodge it; get ready for the attack. 🏃‍♂️🔥')
     else:
