@@ -1,0 +1,43 @@
+# This is my first Python project. Enjoy, and any feedback is welcome!
+
+import random
+import sys
+
+# Welcome to RPG Project, where you are a warrior with the mission
+# of delivering a letter to the king as quickly as possible. 
+# This letter will serve to request reinforcements for your village, 
+# which is under attack by a horde of demons. But be cautious, 
+# as you will encounter demons along your journey who will hinder your path. Good luck! 🗡️📜🔥
+
+
+player_hp = 100
+enemy_hp = 100
+player_choice = 0
+random_dodge = 0
+
+
+player_name = input('\n Enter your name, brave warrior!! \n R:')
+
+if player_hp > 0:
+    print(f'\n Welcome {player_name} your adventure begins here')
+    print('\n Your village is under attack! 🏰🔥')
+    print('\n Quickly, run outside of the village to deliver the letter to the king. 🏃‍♂️📜👑')
+
+    player_choice = int(input('\n 1- Run Outside \n 2- Stay \n R: '))
+    if player_choice == 1:
+        print('\n Very well, you ran outside of your village with all your might, but the journey is not yet over. 🏃‍♂️💨🌄')
+    else:
+        print('\n You stayed, and the letter was not delivered. The demons destroyed your village. Game over. 🔥📜😢')
+        sys.exit()
+    
+    print('\n While you were running toward the castle, you see a demon that will cross your path. 🏰🏃‍♂️👹')
+    
+    player_choice = int(input('\n 1- Dodge (50% chance) 🏃‍♂️🔥 \n 2- Attack. 🗡️🔥 \n R: '))
+    if player_choice == 1:
+      random_dodge = random.randint(1, 100)
+      if random_dodge >= 50:
+        print(f'\n You successfully dodged it; you can continue on your way. 🏃‍♂️👍')
+      else:
+        print('\n You couldn’t dodge it; get ready for the attack. 🏃‍♂️🔥')
+    else:
+      print('\n Get ready for the attack. 🏃‍♂️🔥')
