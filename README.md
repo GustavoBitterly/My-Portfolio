@@ -1,7 +1,6 @@
 # Portfolio
- Repository to share all the exercises and examples of my development work.
+"Repository to Share All Exercises and Examples from My Development Work.
 
--- The different exercises, examples, etc.. they will be separated according to the language used and will be in their respective branch.
+The various exercises, examples, etc., will be organized according to the programming language used and placed in their respective folders.
 
-Created by 
-Gustavo Bitterly.
+Created by Gustavo Bitterly."
