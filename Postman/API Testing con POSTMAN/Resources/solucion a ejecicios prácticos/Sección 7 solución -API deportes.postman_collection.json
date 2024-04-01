@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "eb2c4378-4577-4237-9035-4136ac4eb389",
+		"name": "API deportes1-solucion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5163338"
+	},
+	"item": [
+		{
+			"name": "Lista todas las ligas deportivas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Respuesta se procesa en menos de 800 milisegundos\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Respuesta contiene un texto que diga Leagues\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"leagues\");\r",
+							"});\r",
+							"pm.test(\"Respuesta contiene una liga con nombre English LEague\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.leagues[1].strLeague).to.eql(\"English League Championship\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.thesportsdb.com/api/v1/json/3/all_leagues.php",
+					"protocol": "https",
+					"host": [
+						"www",
+						"thesportsdb",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"json",
+						"3",
+						"all_leagues.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista los equipos por deporte y pais",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"\r",
+							"//Crea un pais distinto en una variable global  por cada ejecucion de la request\r",
+							"\r",
+							"pm.globals.set(\"country\",pm.variables.replaceIn('{{$randomCountry}}'));\r",
+							"\r",
+							"// Imprime el pais en la consola \r",
+							"console.log (\"pais generado \"+pm.globals.get(\"country\"))\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"//Assersion multiple\r",
+							"pm.test(\"REspuesta  no contine valores nulos en los campos IDteam,nombre del equipo (strTeam) y año de creacion (intFormedYear)  \", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"      pm.expect(jsonData.teams[0].idTeam).is.not.null;\r",
+							"      pm.expect(jsonData.teams[0].strTeam).is.not.null;\r",
+							"      pm.expect(jsonData.teams[0].strSport).is.not.null;\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?s=Soccer&c=spain",
+					"protocol": "https",
+					"host": [
+						"www",
+						"thesportsdb",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"json",
+						"3",
+						"search_all_teams.php"
+					],
+					"query": [
+						{
+							"key": "s",
+							"value": "Soccer"
+						},
+						{
+							"key": "c",
+							"value": "spain"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista jugadores por nombre",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"\r",
+							"pm.test(\"Valida que la descripcion del jugador diga Leo\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.player[0].strDescriptionEN).to.contain(\"Leo\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Valida que el campo strTeam contengta un valor  tipo string\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"     pm.expect(jsonData.player[0].strTeam).to.be.a(\"string\")\r",
+							"});\r",
+							"\r",
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.thesportsdb.com/api/v1/json/2/searchplayers.php?p=messi",
+					"protocol": "https",
+					"host": [
+						"www",
+						"thesportsdb",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"json",
+						"2",
+						"searchplayers.php"
+					],
+					"query": [
+						{
+							"key": "p",
+							"value": "messi"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

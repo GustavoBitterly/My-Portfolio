@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "bdaae5cb-0d14-4c27-88d6-107818395f43",
+		"name": "API cocteles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cocteles por nombre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "www.thecocktaildb.com/api/json/v1/1/search.php?s={{coctel}}",
+					"host": [
+						"www",
+						"thecocktaildb",
+						"com"
+					],
+					"path": [
+						"api",
+						"json",
+						"v1",
+						"1",
+						"search.php"
+					],
+					"query": [
+						{
+							"key": "s",
+							"value": "{{coctel}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar ingredientes por nombre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/json/v1/1/search.php?i={{ingrediente}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"json",
+						"v1",
+						"1",
+						"search.php"
+					],
+					"query": [
+						{
+							"key": "i",
+							"value": "{{ingrediente}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filtrar cocteles por primera letra",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "www.thecocktaildb.com/api/json/v1/1/search.php?f={{letra-coctel}}",
+					"host": [
+						"www",
+						"thecocktaildb",
+						"com"
+					],
+					"path": [
+						"api",
+						"json",
+						"v1",
+						"1",
+						"search.php"
+					],
+					"query": [
+						{
+							"key": "f",
+							"value": "{{letra-coctel}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "coctel",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,920 @@
+{
+	"info": {
+		"_postman_id": "0e9b7a36-e612-4904-8a01-74aa6c8e1158",
+		"name": "Curso de API testing Postman -APIs clases",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5163338"
+	},
+	"item": [
+		{
+			"name": "Clase 10- Mi primer request",
+			"item": [
+				{
+					"name": "API listar todos usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://reqres.in/api/users/",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clase12. Manejo de colecciones",
+			"item": [
+				{
+					"name": "API de usuarios",
+					"item": [
+						{
+							"name": "API listar todos usuarios",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://reqres.in/api/users/",
+									"protocol": "https",
+									"host": [
+										"reqres",
+										"in"
+									],
+									"path": [
+										"api",
+										"users",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "API listar usuario especifico",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://reqres.in/api/users/2",
+									"protocol": "https",
+									"host": [
+										"reqres",
+										"in"
+									],
+									"path": [
+										"api",
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "APi de usuarios",
+					"item": [
+						{
+							"name": "API listar articulos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://reqres.in/api/unknown",
+									"protocol": "https",
+									"host": [
+										"reqres",
+										"in"
+									],
+									"path": [
+										"api",
+										"unknown"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Clases 14/16/17/18/1920 -MyStoreAPI (Metodos API Rest)",
+			"item": [
+				{
+					"name": "Traer todos los productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://mystoreapi.com/catalog/categories",
+							"protocol": "https",
+							"host": [
+								"mystoreapi",
+								"com"
+							],
+							"path": [
+								"catalog",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Productos x categoria Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://mystoreapi.com/catalog/category/Bike/products?limit=10&skip=1",
+							"protocol": "https",
+							"host": [
+								"mystoreapi",
+								"com"
+							],
+							"path": [
+								"catalog",
+								"category",
+								"Bike",
+								"products"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "skip",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API crear productos en la tienda Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Laptop\",\r\n  \"price\": 1500,\r\n  \"manufacturer\": \"Sony\",\r\n  \"category\": \"Appliances\",\r\n  \"description\": \"Sony bravia 8K 50xx\",\r\n  \"tags\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://mystoreapi.com/catalog/product",
+							"protocol": "https",
+							"host": [
+								"mystoreapi",
+								"com"
+							],
+							"path": [
+								"catalog",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API borrar producto de la tienda Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/catalog/product/283710",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"catalog",
+								"product",
+								"283710"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clases 22/23/24 Manejo de autenticación en APIS",
+			"item": [
+				{
+					"name": "Ejemplo autenticacion basica",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "postman",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://postman-echo.com/basic-auth",
+							"protocol": "http",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"basic-auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ejemplo autentication API KEy - API Nasa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.nasa.gov/planetary/apod?api_key=TbAQexEngDiB4EmNKBeTmgiePg1QLxZp2c781Y6N",
+							"protocol": "https",
+							"host": [
+								"api",
+								"nasa",
+								"gov"
+							],
+							"path": [
+								"planetary",
+								"apod"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "TbAQexEngDiB4EmNKBeTmgiePg1QLxZp2c781Y6N"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ejemplo autenticacion con token - Generar token accesso Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"clientName\": \"Esteban Balvin\",\r\n   \"clientEmail\": \"esteban1@example.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-books-api.glitch.me/api-clients/",
+							"protocol": "https",
+							"host": [
+								"simple-books-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"api-clients",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar orden de libro Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "0260a67e8b057b6f78a625adcef4965672f7e5dea145e69c83478e424e687c37",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"bookId\": 1,\r\n  \"customerName\": \"John\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-books-api.glitch.me/orders",
+							"protocol": "https",
+							"host": [
+								"simple-books-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Traer todas las ordenes Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "0260a67e8b057b6f78a625adcef4965672f7e5dea145e69c83478e424e687c37",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-books-api.glitch.me/orders",
+							"protocol": "https",
+							"host": [
+								"simple-books-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clases 26/27/28/29/30- MyStoreAPI (Manejo de Variables)",
+			"item": [
+				{
+					"name": "Traer todos los productos",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/catalog/categories",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"catalog",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Productos x categoria",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"\r",
+									"// Crear variables en tiempo de ejecucion\r",
+									"\r",
+									"pm.globals.set(\"CATEGORIA1\", \"Hola\");\r",
+									"pm.collectionVariables.set(\"CATEGORIA2\", \"Hola2\");\r",
+									"pm.environment.set(\"CATEGORIA3\", \"Hola3\");\r",
+									"\r",
+									"/// leer variables definidas\r",
+									"console.log(pm.globals.get(\"URL\"));\r",
+									"console.log(pm.environment.get(\"ID-PRODUCTO\"));\r",
+									"console.log( pm.collectionVariables.get(\"VARIABLE_PRUEBA\"));\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/catalog/category/{{CATEGORIA}}/products?limit=10&skip=1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"catalog",
+								"category",
+								"{{CATEGORIA}}",
+								"products"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "skip",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API productos x ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/catalog/product/{{ID-PRODUCTO}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"catalog",
+								"product",
+								"{{ID-PRODUCTO}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API crear productos en la tienda",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"TV\",\r\n  \"price\": 1500,\r\n  \"manufacturer\": \"Sony\",\r\n  \"category\": \"Appliances\",\r\n  \"description\": \"Sony bravia 8K 50xx\",\r\n  \"tags\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/catalog/product",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"catalog",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clase 32/33/34/35/37 - MyStoreAPi (Pruebas de APIS)",
+			"item": [
+				{
+					"name": "Traer todos los productos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Prueba que valida que la respuesta es exitosa (200) \", function () {\r",
+									"    \r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Respuesta de la API esta menor que 900 ms\", function () {\r",
+									"\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1200);\r",
+									"\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://mystoreapi.com/catalog/categories",
+							"protocol": "https",
+							"host": [
+								"mystoreapi",
+								"com"
+							],
+							"path": [
+								"catalog",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API productos x ID Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Respuesta de API contiene campo ID\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Respuesta de API contiene campo precio\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"price\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Encabezado de respuesta contiene fecha\", function () {\r",
+									"    pm.response.to.have.header(\"Date\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba que valida que el estado sea siempre activo\", function () {\r",
+									"    \r",
+									"    var jsonData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(jsonData.price).to.eq(78544);\r",
+									"});\r",
+									"\r",
+									"// Assertions mas avanzadas\r",
+									"\r",
+									"pm.test(\"Validacion con multiples assertions \", () => {\r",
+									"    //parse the response JSON and test three properties\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.name).to.eql('TV ');\r",
+									"    pm.expect(responseJson.description).to.contains('Sony');\r",
+									"    pm.expect(responseJson.name).to.be.a('string');\r",
+									"    pm.expect(responseJson.name).to.have.lengthOf(3);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/catalog/product/283711",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"catalog",
+								"product",
+								"283711"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Productos x categoria",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Validacion de respuesta de un vector \", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    //console.log(jsonData.products[19].id)\r",
+									"    pm.expect(jsonData.products[1].name).to.contain(\"Plastic\");\r",
+									"\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://mystoreapi.com/catalog/category/Software/products?limit=20&skip=1",
+							"protocol": "https",
+							"host": [
+								"mystoreapi",
+								"com"
+							],
+							"path": [
+								"catalog",
+								"category",
+								"Software",
+								"products"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "20"
+								},
+								{
+									"key": "skip",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clase 36-PetStore (PreReqScripts+VariablesDinamicas)",
+			"item": [
+				{
+					"name": "API crear usuario",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Para mas variables dinamicas, abrir\r",
+									"https://learning.postman.com/docs/writing-scripts/script-references/variables-list/\r",
+									"\r",
+									"\r",
+									"pm.globals.set(\"username\", pm.variables.replaceIn('{{$randomFirstName}}'));\r",
+									"\r",
+									"pm.globals.set(\"lastName\", pm.variables.replaceIn('{{$randomLastName}}'));\r",
+									"\r",
+									"pm.globals.set(\"email\", pm.variables.replaceIn('{{$randomEmail}}'));\r",
+									"\r",
+									"pm.globals.set(\"phone\", pm.variables.replaceIn('{{$randomPhoneNumber}}'));\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"id\": 1211745,\r\n    \"username\": \"{{username}}\",\r\n    \"firstName\": \"Esteban\",\r\n    \"lastName\": \"{{lastName}}\",\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"string\",\r\n    \"phone\": \"{{phone}}\",\r\n    \"userStatus\": 0\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/createWithArray",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"createWithArray"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API consulta usuario",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"id\": 1211745,\r\n    \"username\": \"\",\r\n    \"firstName\": \"\",\r\n    \"lastName\": \"\"\r\n\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/{{username}}",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"{{username}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "APi borra usuario",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/{{username}}",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"{{username}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "APi actualizar usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1211744,\r\n    \"username\": \"Martin\",\r\n    \"firstName\": \"Jose\",\r\n    \"lastName\": \"Sanchez\",\r\n    \"email\": \"josem@gmail.com\",\r\n    \"password\": \"string\",\r\n    \"phone\": \"00000123\",\r\n    \"userStatus\": 0\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/Martin",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"Martin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "CATEGORIA2",
+			"value": ""
+		},
+		{
+			"key": "VARIABLE_PRUEBA",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

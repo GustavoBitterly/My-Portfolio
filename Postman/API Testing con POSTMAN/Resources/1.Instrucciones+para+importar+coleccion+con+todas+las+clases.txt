@@ -1,0 +1,20 @@
+** Instrucciones para improtar la coleccion con todas las APIs de las clases***
+
+Colección de postman con todas las APIS y ejemplos que se estarán explicado en cada clase, incluyendo variables de ambiente.
+
+1.Descarga el zip file llamado coleccion usada en las clases.zip y descomprimelo en alguna carpeta local en tu laptop.
+
+2.Para importarta debes abrir tu Postman y ubicarte en tu workspace
+
+3.Clic en la opcion collections de la parte superior izquierda.
+
+4.Allí veras la opcion "Import"
+
+5.En la ventana de importación, debes cargar el archivo de las  colecciones que se encuentra en la carpeta que descomprimiste en los pasos anteriores.  La extension de la coleccion debe ser .JSON (Curso de API testing Postman-APIs clases-jun2022.postman_collection)
+
+6.Confirma la importación
+
+7.Una vez importado el archivo JSON asi se verá en tu workspace.
+
+
+Para importar las variables de coleccion, ubicate en la opción environments del menu izquierdo y repite los mismos pasos. 
