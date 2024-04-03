@@ -1,0 +1,6 @@
+****IMPORTANTE****
+
+La coleccion con todas las carpetas con las APIs usadas en todas las clases
+la puedes encontrar para descarga en la clase # 3. Allí tambien estan las instrucciones 
+para importarla junto con los archivos de las variables usadas
+
