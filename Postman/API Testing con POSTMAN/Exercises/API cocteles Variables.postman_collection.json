@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "9a8eb20c-65e7-4200-b230-d58e7d88efa8",
+		"name": "API cocteles Variables",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33991620"
+	},
+	"item": [
+		{
+			"name": "Cocteles por nombre (variable colección)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "www.thecocktaildb.com/api/json/v1/1/search.php?s={{coctel}}",
+					"host": [
+						"www",
+						"thecocktaildb",
+						"com"
+					],
+					"path": [
+						"api",
+						"json",
+						"v1",
+						"1",
+						"search.php"
+					],
+					"query": [
+						{
+							"key": "s",
+							"value": "{{coctel}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar ingredientes por nombre (variables ambiente)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/json/v1/1/search.php?i={{ingrediente}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"json",
+						"v1",
+						"1",
+						"search.php"
+					],
+					"query": [
+						{
+							"key": "i",
+							"value": "{{ingrediente}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar ingredientes por letra(variables globales)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "www.thecocktaildb.com/api/json/v1/1/search.php?f={{letra-coctel}}",
+					"host": [
+						"www",
+						"thecocktaildb",
+						"com"
+					],
+					"path": [
+						"api",
+						"json",
+						"v1",
+						"1",
+						"search.php"
+					],
+					"query": [
+						{
+							"key": "f",
+							"value": "{{letra-coctel}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "coctel",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

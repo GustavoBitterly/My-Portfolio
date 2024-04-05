@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "d949c4bb-a2b9-4679-9235-fd5b48233eb0",
+		"name": "colección API Libros",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33991620"
+	},
+	"item": [
+		{
+			"name": "Traer Libros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://bookstore.demoqa.com/BookStore/v1/Books",
+					"protocol": "https",
+					"host": [
+						"bookstore",
+						"demoqa",
+						"com"
+					],
+					"path": [
+						"BookStore",
+						"v1",
+						"Books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar libro x ISBN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://bookstore.demoqa.com/BookStore/v1/Book?ISBN=9781449325862",
+					"protocol": "https",
+					"host": [
+						"bookstore",
+						"demoqa",
+						"com"
+					],
+					"path": [
+						"BookStore",
+						"v1",
+						"Book"
+					],
+					"query": [
+						{
+							"key": "ISBN",
+							"value": "9781449325862"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

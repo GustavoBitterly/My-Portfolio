@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "e6b60d98-c5b2-4e83-bca1-3113371d882d",
+		"name": "API tienda de mascotas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33991620"
+	},
+	"item": [
+		{
+			"name": "Crear usuario tienda mascota",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"id\":  12,\r\n    \"username\": \"GustavoB\",\r\n    \"firstName\": \"Gustavo\",\r\n    \"lastName\": \"Bitterly\",\r\n    \"email\": \"prueba@api.cl\",\r\n    \"password\": \"pruebapass\",\r\n    \"phone\": \"56963122401\",\r\n    \"userStatus\": 1\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/createWithList",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"createWithList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/GustavoB",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"GustavoB"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar usuario tienda mascotas Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
