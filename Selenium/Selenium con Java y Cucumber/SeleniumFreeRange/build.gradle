@@ -1,0 +1,57 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.9.3'
+}
+
+group 'com.GustavoBitterly'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    allureVersion = '2.24.0'
+    junitVersion = '5.10.0'
+}
+
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    testImplementation('com.codeborne:selenide:6.19.1')
+    testImplementation("io.qameta.allure:allure-selenide:${allureVersion}")
+    testImplementation('org.slf4j:slf4j-simple:2.0.7')
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation 'org.seleniumhq.selenium:selenium-java:4.19.1'
+
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation 'org.testng:testng:7.10.0'
+
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
+    implementation 'io.cucumber:cucumber-java:7.16.1'
+
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
+    testImplementation 'io.cucumber:cucumber-junit:7.16.1'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+allure {
+    autoconfigure = true
+    version = "${allureVersion}"
+
+    useJUnit5 {
+        version = "${allureVersion}"
+    }
+}
