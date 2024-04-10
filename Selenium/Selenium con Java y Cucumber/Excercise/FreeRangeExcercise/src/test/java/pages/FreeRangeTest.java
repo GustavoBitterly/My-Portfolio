@@ -1,7 +1,6 @@
 package pages;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -22,7 +21,7 @@ public class FreeRangeTest {
     @Test
     public void navegamosAGoogle(){
         //Navega a la pagina Web
-        driver.get("https://www.google.cl");
+        driver.get("https://www.freerangetesters.com");
     }
 
     @AfterMethod
