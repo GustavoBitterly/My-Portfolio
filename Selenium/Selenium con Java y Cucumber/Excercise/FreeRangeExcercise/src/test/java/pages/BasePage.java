@@ -1,6 +1,7 @@
 package pages;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -89,6 +90,18 @@ public class BasePage {
         List<WebElement> dropdownOptions = dropdown.getOptions();
 
         return dropdownOptions.size();
+    }
+
+    public List<String> getDropdownValues(String locator) {
+        Select dropdown = new Select(Find(locator));
+
+        List<WebElement> dropDownOptions = dropdown.getOptions();
+        List<String> values = new ArrayList<>();
+        for (WebElement option : dropDownOptions) {
+            values.add(option.getText());
+        }
+
+        return values;
     }
 
 }
