@@ -46,7 +46,7 @@ public class FreeRangeSteps {
         landingPage.clickOnElegirPlanButton();
     }
 
-    @And("select Introduccion al Testing")
+    @And("^select Introduccion al Testing$")
     public void navigateToIntro() {
         cursosPage.clickFundamentosTestingLink();
         fundamentosPage.clickIntroduccionTestingLink();

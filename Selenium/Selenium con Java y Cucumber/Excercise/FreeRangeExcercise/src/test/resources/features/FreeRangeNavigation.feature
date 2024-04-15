@@ -22,7 +22,7 @@ Feature: Navigation bar
   @Courses
   Scenario: Courses are presented correctly to potential customers
     When I go to Cursos using the navigation bar
-    # And select Introduccion al Testing
+    And select Introduccion al Testing
 
   @Plans
   Scenario: Users can select a plan when signing up
