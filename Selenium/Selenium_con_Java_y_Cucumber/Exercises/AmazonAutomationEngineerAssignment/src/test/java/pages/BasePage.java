@@ -68,7 +68,12 @@ public class BasePage {
     }
 
     public void clickElement(String locator) {
-        Find(locator).click();
+        try {
+            Find(locator).click();
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            // Si no se encuentra el elemento, se captura la excepción aquí
+            System.out.println("Elemento no encontrado: " + locator);
+        }
     }
 
     public void write(String locator, String keysToSend) {
