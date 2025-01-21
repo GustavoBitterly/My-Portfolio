@@ -5,7 +5,7 @@ public class HelloWorld {
         String state = "CHL";
         char gender = "M";
         int age = 27;
-        boolean = true;
+        boolean organDonor = true;
 
         System.out.println(name);
     }
