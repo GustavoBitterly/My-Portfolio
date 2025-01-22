@@ -8,7 +8,7 @@ public class HelloWorld {
         Scanner scanner = new Scanner(System.in);
 
         double usdValue = 0.0045;
-        int clubPenguinCoin = 0;
+        String clubPenguinCoin = "";
         double conversionResult = 0;
 
         System.out.println("Welcome to Club Penguin Conversion Calculator");
@@ -19,7 +19,8 @@ public class HelloWorld {
         clubPenguinCoin = scanner.nextLine(); // int values
 
         System.out.print("Calculating.....");
-        conversionResult = (clubPenguinCoin * usdValue)
+        int coinValue = Integer.parseInt(clubPenguinCoin);
+        conversionResult = (coinValue * usdValue);
 
         System.out.print("You have: $" + conversionResult + " USD in value");
 
