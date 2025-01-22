@@ -1,6 +1,8 @@
+
 import java.util.Scanner;
 
 public class Greetings {
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -9,7 +11,7 @@ public class Greetings {
         String name = scanner.nextLine();
 
         System.out.println(name);
-        */
+         */
 
         System.out.print("Welcome to the Java Escape Room");
         System.out.print("Answer thw next riddle: ");

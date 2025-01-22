@@ -1,6 +1,8 @@
+
 import java.util.Scanner;
 
 public class HelloWorld {
+
     public static void main(String[] args) {
         // Write your code here 💖
         Scanner scanner = new Scanner(System.in);
@@ -17,7 +19,7 @@ public class HelloWorld {
         clubPenguinCoin = scanner.nextLine(); // int values
 
         System.out.print("Calculating.....");
-        conversionResult = (clubPenguinCoin*usdValue)
+        conversionResult = (clubPenguinCoin * usdValue)
 
         System.out.print("You have: $" + conversionResult + " USD in value");
 

@@ -1,7 +1,9 @@
+
 public class HelloWorld {
+
     public static void main(String[] args) {
         // Write your code here 💖
-        double result = 0; 
+        double result = 0;
 
         result = 8 + 2;     // result is now 10
         result = 8 - 2;     // result is now 6
@@ -12,7 +14,7 @@ public class HelloWorld {
         System.out.println(result); // 0
 
         double originalPrice = 60.0;
-        double discount = 20.0;              
+        double discount = 20.0;
 
         // Apply discount
         double finalPrice = originalPrice - (originalPrice * (discount / 100));
@@ -22,7 +24,7 @@ public class HelloWorld {
         //EXERCISE
         double chemicalA = 35.8;
         double chemicalB = 21.9;
-        
-        double reactionResult =  (chemicalA + chemicalB) / (chemicalA*chemicalB);
+
+        double reactionResult = (chemicalA + chemicalB) / (chemicalA * chemicalB);
     }
 }
